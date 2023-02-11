@@ -52,7 +52,7 @@ class FollowSerializer(serializers.ModelSerializer):
             UniqueTogetherValidator(
                 queryset=Follow.objects.all(),
                 fields=('user', 'following')
-            )
+            ),
         )
 
     def validate_following(self, data):
